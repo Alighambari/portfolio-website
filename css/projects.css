@@ -1,0 +1,497 @@
+/* =========================================================
+   PROJECTS PAGE
+   ========================================================= */
+
+/* ---------- PAGE HERO ---------- */
+
+.projects-hero {
+  width: 80%;
+  max-width: 800px;
+  margin: 120px auto 60px;
+  text-align: center;
+}
+
+.projects-hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: var(--text-primary-white);
+  margin: 8px 0 0;
+}
+
+.projects-hero .line {
+  margin: 20px auto;
+}
+
+.projects-hero p {
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* ---------- GRID ---------- */
+
+.projects {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* ---------- CARD ---------- */
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  /* background: rgba(255, 255, 255, 0.02); */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  /* backdrop-filter: blur(12px); */
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.4s ease,
+    box-shadow 0.5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(24, 201, 130, 0.45);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(24, 201, 130, 0.12);
+}
+
+/* ---------- MEDIA ---------- */
+
+.project-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0a0f0d;
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.08);
+}
+
+/* ---------- OVERLAY ---------- */
+
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-card__overlay {
+  opacity: 1;
+}
+
+/* ---------- LINKS ---------- */
+
+.project-card__links {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-card:hover .project-card__links {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card__links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(24, 201, 130, 0.15);
+  border: 1px solid rgba(24, 201, 130, 0.35);
+  backdrop-filter: blur(12px);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-card__links a:hover {
+  background: rgba(24, 201, 130, 0.3);
+  border-color: rgba(24, 201, 130, 0.65);
+  transform: translateX(-3px);
+}
+
+.project-card__links svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- CONTENT ---------- */
+
+.project-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px 22px 24px;
+}
+
+.project-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-card__header h3 {
+  margin: 0;
+  color: var(--text-primary-white);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project-card__year {
+  color: var(--accent);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.project-card__description {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------- TECH TAGS ---------- */
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.project-card__tech span {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--bg-primary);
+  border: 1px solid rgba(24, 201, 130, 0.22);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- BACK TO HOME ---------- */
+
+.projects-footer-nav {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto 100px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.back-home-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  border: 1px solid rgb(24 201 130 / 0%);
+  background: transparent;
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  overflow: hidden;
+  z-index: 0;
+
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* ---------- محتوا روی موج ---------- */
+
+.back-home-link svg,
+.back-home-link span {
+  /* position: relative; */
+  z-index: 2;
+  transition: color 0.4s ease;
+}
+
+.back-home-link svg {
+  width: 16px;
+  height: 16px;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.4s ease;
+}
+
+/* ---------- موج سبز (پیش‌فرض، آروم) ---------- */
+
+.back-home-link::before {
+  content: "";
+  position: absolute;
+  top: 3%;
+  left: -4%;
+  width: 111%;
+  height: 75%;
+  z-index: 1;
+
+  background: rgba(24, 201, 130, 0.25);
+  filter: blur(6px);
+
+  transform-origin: center;
+  transition: transform 0.9s cubic-bezier(0.3, 1, 0.8, 1);
+
+  animation: backWave 4s ease-in-out infinite;
+}
+
+@keyframes backWave {
+  0% {
+    transform: translateX(0) skewY(195deg) scaleY(1);
+  }
+  25% {
+    transform: translateX(2%) skewY(198deg) scaleY(1);
+  }
+  50% {
+    transform: translateX(-2%) skewY(160deg) scaleY(0.9);
+  }
+  75% {
+    transform: translateX(3%) skewY(197deg) scaleY(2.05);
+  }
+  100% {
+    transform: translateX(0) skewY(195deg) scaleY(1);
+  }
+}
+
+/* ---------- موج سریع هنگام Hover ---------- */
+
+.back-home-link:hover::before {
+  animation: backWaveHover 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes backWaveHover {
+  0% {
+    transform: translateX(-20%) skewY(195deg) scaleY(1);
+  }
+  35% {
+    transform: translateX(20%) skewY(187deg) scaleY(1.15);
+  }
+  65% {
+    transform: translateX(65%) skewY(202deg) scaleY(0.9);
+  }
+  100% {
+    transform: translateX(120%) skewY(195deg) scaleY(1);
+  }
+}
+
+/* ---------- Hover روی دکمه ---------- */
+
+.back-home-link:hover {
+  color: var(--text-primary-white);
+  border-color: rgba(24, 201, 130, 0.85);
+  background: rgba(24, 201, 130, 0.06);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(24, 201, 130, 0.2);
+}
+
+/* فلش حرکت کنه */
+.back-home-link:hover svg {
+  transform: translateX(-5px);
+  color: var(--accent);
+}
+
+/* ---------- Active (کلیک) ---------- */
+
+.back-home-link:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(24, 201, 130, 0.3);
+}
+
+/* ---------- Focus (دسترسی‌پذیری) ---------- */
+
+.back-home-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+
+/* ---------- ACTIVE NAV LINK ---------- */
+
+/* nav a.active {
+  color: var(--accent);
+}
+
+nav a.active::after {
+  width: 60%;
+} */
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+  .projects-hero {
+    width: 90%;
+    margin: 100px auto 40px;
+  }
+
+  .projects,
+  .projects-footer-nav {
+    width: 90%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-hero {
+    margin: 90px auto 30px;
+  }
+
+  .projects-hero h1 {
+    font-size: 38px;
+  }
+
+  .project-card__content {
+    padding: 18px 18px 20px;
+  }
+
+  .project-card__header h3 {
+    font-size: 16px;
+  }
+
+  .project-card__links {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- LIGHT THEME ---------- */
+
+
+body.light .projects-hero .line{
+    background: var(--text-secondary);
+}
+
+body.light .project-card__links a{
+    background: #fff;
+}
+
+body.light .project-card__links svg{
+    color: #0f172a;
+    border: none;
+}
+
+body.light .project-card {
+  /* border: 1px solid rgba(0, 0, 0, 0.06); */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light .project-card:hover {
+  border-color: #fff;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+body.light .project-card__header h3 {
+  color: #0f172a;
+}
+
+body.light .project-card__description {
+  color: #475569;
+}
+
+body.light .project-card__year {
+  color: #0f766e;
+}
+
+body.light .project-card span {
+  position: relative;
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--bg-primary);
+  color: #0c0c0c;
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+body.light .projects-hero h1 {
+  color: #0f172a;
+}
+
+body.light .back-home-link {
+  color:#515b1c ;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .back-home-link:hover {
+  color: #0f766e;
+  border-color: rgba(16, 185, 129, 0.5);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+
+
+body.light .back-home-link::before{
+    background:rgb(0 0 0 / 18%);
+}
+
+/* =========================================================
+   BACK TO HOME — WAVE ANIMATION
+   ========================================================= */
+
+

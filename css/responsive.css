@@ -1,0 +1,275 @@
+/* =================================================
+   TABLET (nav collapses, hero stacks)
+================================================= */
+
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    margin-top: 90px;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .hero p {
+    margin: auto;
+  }
+  .code-bg {
+    left: -25%;
+  }
+  .stats {
+    justify-content: center;
+  }
+  .about{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .boxes {
+    justify-content: center;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  /* ---------- Header ---------- */
+
+  header {
+    width: 92%;
+    height: 64px;
+    padding: 0 16px;
+    border-radius: 24px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .theme-toggle {
+    margin-left: 0;
+    width: 37px;
+    height: 37px;
+    padding: 0;
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid rgba(24, 201, 130, 0.4);
+    box-shadow: none;
+  }
+
+  .theme-toggle:hover {
+    box-shadow: 0 0 14px rgba(24, 201, 130, 0.25);
+  }
+
+  .theme-toggle .toggle-circle {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transform: none !important;
+  }
+  body.light .theme-toggle .toggle-circle {
+    background: #ffc552;
+  }
+  .theme-toggle svg {
+    color: var(--text-primary);
+    left: 49%;
+    top: 50%;
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    flex-direction: column-reverse;
+    width: 88%;
+    min-height: auto;
+    margin-top: 110px;
+    padding-bottom: 20px;
+    gap: 0;
+  }
+
+  .code-bg {
+    display: none;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .greet {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .role {
+    font-size: 18px;
+    margin-top: 4px;
+  }
+
+  .hero .line {
+    margin: 16px auto;
+  }
+
+  .hero p {
+    font-size: 13px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .stats {
+    display: none;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  .hero_btn {
+    padding: 14px 30px;
+    font-size: 14px;
+  }
+
+  .scroll-indicator {
+    margin-top: 26px;
+  }
+
+  /* ---------- Image card (arch / portal style) ---------- */
+
+  .image-card {
+    position: relative;
+    width: 230px;
+    margin: 0 auto 34px;
+    padding: 14px 14px 18px;
+    border-radius: 130px 130px 30px 30px;
+    border: 1.5px solid rgba(24, 201, 130, 0.55);
+    box-shadow:
+      0 0 55px rgba(24, 201, 130, 0.35),
+      inset 0 0 25px rgba(255, 255, 255, 0.06);
+    background: radial-gradient(
+      circle at 50% 25%,
+      rgba(24, 201, 130, 0.1),
+      transparent 70%
+    );
+    animation: floatImage 6s ease-in-out infinite;
+  }
+
+  .image-card::before {
+    content: "";
+    position: absolute;
+    inset: -45px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(24, 201, 130, 0.18),
+      transparent 70%
+    );
+    filter: blur(30px);
+    z-index: -1;
+  }
+
+  .glass-top {
+    display: none;
+  }
+
+  .image-card img {
+    width: 100%;
+    height: 310px;
+    border-radius: 110px 110px 20px 20px;
+  }
+
+  /* ---------- About section (boxed card) ---------- */
+
+  .about {
+    width: 92%;
+    margin: 0 auto 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.015);
+    padding: 32px 20px;
+    text-align: left;
+  }
+
+  .about h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .about-subtitle {
+    display: none;
+  }
+
+  .about p {
+    max-width: none;
+    text-align: center;
+  }
+
+  .about-content {
+    text-align: left;
+    gap: 30px;
+  }
+
+  .boxes {
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .box:last-child {
+    width: 70%;
+  }
+  .line {
+    width: 100%;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ---------- Qualification / project cards ---------- */
+
+  .qualification {
+    padding: 40px 5%;
+  }
+
+  .cards div {
+    width: 100%;
+    text-align: center;
+    line-height: 24px;
+  }
+}

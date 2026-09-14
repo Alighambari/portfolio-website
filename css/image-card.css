@@ -1,0 +1,57 @@
+.image-card {
+  position: relative;
+  width: 300px;
+  padding: 18px;
+  border-radius: 50px;
+  border: 1px solid rgba(24, 201, 130, 0.45);
+  box-shadow:
+    0 0 35px rgba(24, 201, 130, 0.25),
+    inset 0 0 25px rgba(255, 255, 255, 0.08);
+  z-index: 5;
+  animation: floatImage 6s ease-in-out infinite;
+}
+
+.image-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+/* glass window dots */
+
+.glass-top {
+  height: 22px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.glass-top span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(24, 201, 130, 0.8);
+}
+
+.glass-top span:nth-child(2) {
+  opacity: 0.65;
+}
+
+.glass-top span:nth-child(3) {
+  opacity: 0.35;
+}
+
+/* hover effect */
+
+.image-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 50px rgba(24, 201, 130, 0.45),
+    inset 0 0 35px rgba(255, 255, 255, 0.12);
+
+  transition: 0.5s;
+}

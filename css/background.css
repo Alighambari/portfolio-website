@@ -1,0 +1,112 @@
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -100;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 2, 1, 0.2), transparent 35%),
+    radial-gradient(circle at 80% 25%, rgba(2, 5, 4, 0.12), transparent 35%),
+    radial-gradient(circle at 70% 80%, rgba(0, 7, 3, 0.884), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(3, 3, 3, 0.1), transparent 45%),
+    linear-gradient(135deg, #131d1d 0%, #04110c 30%, #000000 60%, #020303 100%);
+}
+
+.bg-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+
+  background-size: 80px 80px;
+
+  opacity: 0.45;
+
+  mask-image: radial-gradient(circle, black 30%, transparent 100%);
+}
+
+.aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: auroraMove 20s ease-in-out infinite alternate;
+}
+
+.aurora-1 {
+  width: 700px;
+  height: 700px;
+  top: -250px;
+  left: -200px;
+  background: #00ff99;
+  opacity: 0.14;
+}
+
+.aurora-2 {
+  width: 650px;
+  height: 650px;
+  right: -250px;
+  top: 150px;
+  background: #00d084;
+  opacity: 0.1;
+}
+
+.aurora-3 {
+  width: 800px;
+  height: 800px;
+  left: 35%;
+  bottom: -400px;
+  background: #00ffcc;
+  opacity: 0.08;
+}
+
+@keyframes auroraMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(40px, -40px) scale(1.12);
+  }
+
+  100% {
+    transform: translate(-30px, 30px) scale(0.95);
+  }
+}
+
+#network-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.15) 75%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

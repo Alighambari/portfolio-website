@@ -1,0 +1,481 @@
+body.light {
+  --bg-primary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent: #10b981;
+  --text-color: #ffffff;
+  --text-primary-white: #0f172a;
+}
+
+body.light .background {
+  background-color: #f8fafc !important;
+  background: #f8fafc !important;
+}
+
+body.light .bg-grid {
+  opacity: 0.15;
+  filter: invert(1);
+}
+
+body.light .noise {
+  opacity: 0.02;
+}
+
+body.light header {
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
+}
+
+body.light .logo {
+  color: #4a4e4d;
+  text-shadow: none;
+}
+
+body.light nav a {
+  color: #475569;
+}
+
+body.light nav a:hover {
+  color: #0f172a;
+  background: rgba(16, 185, 129, 0.08);
+}
+
+body.light nav a::after {
+  background: #10b981;
+}
+
+body.light .theme-toggle {
+  border: 1px solid rgba(203, 195, 195, 0.7);
+  box-shadow:
+    inset 1 1px 1px rgba(255, 255, 255, 0.7),
+    0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+body.light .theme-toggle .toggle-circle {
+  transform: translateX(34px);
+  background: #ffaa00;
+  color: var(--text-color);
+}
+
+body.light .theme-toggle .moon {
+  opacity: 0;
+  transform: rotate(180deg) scale(0.5);
+}
+
+body.light .theme-toggle .sun {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* ۴. بخش Hero (معرفی) */
+body.light .code-bg {
+  color: #03261a;
+  opacity: 0.4;
+}
+
+body.light .hero h1 {
+  color: #0f172a;
+}
+
+body.light .hero p {
+  color: black;
+}
+
+body.light .line {
+  background: #10b981;
+}
+
+body.light .stats {
+  color: #0f172a;
+}
+
+body.light .stats small {
+  color: #64748b;
+}
+
+body.light .image-card {
+  border: 0px solid rgba(62, 82, 74, 0.35) !important;
+  box-shadow:
+    0 20px 40px -15px rgb(0 0 0 / 64%),
+    0 0 30px rgb(244 255 250 / 18%),
+    inset 0 0 20px #d7d4d4 !important;
+}
+
+body.light .image-card:hover {
+  border-color: rgba(66, 73, 70, 0.6) !important;
+  box-shadow:
+    0 30px 50px -15px rgba(0, 0, 0, 0.12),
+    0 0 45px rgba(34, 39, 37, 0.32),
+    inset 0 0 25px rgba(255, 255, 255, 0.9) !important;
+}
+
+body.light .image-card img {
+  border-radius: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light .glass-top span {
+  background: #080808;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
+body.light .about {
+  border-top: 1px solid #9b9b9b;
+}
+
+body.light .about h2,
+body.light .about h3,
+body.light .skills h4 {
+  color: #0f172a;
+}
+
+body.light .about p {
+  color: #475569;
+}
+
+body.light .download-btn {
+  box-shadow:
+    0 0 0px 1px rgba(62, 82, 74, 0.35),
+    0 0 10px 2px rgba(0, 0, 0, 0.35),
+    inset 0 0 0px 1px #d5d1d1,
+    inset 0 0 30px 2px rgba(0, 0, 0, 0.35);
+  color: var(--text-primary);
+  text-shadow: 8px 2px 22px var(--bg-primary);
+}
+
+body.light .download-btn:hover {
+  box-shadow:
+    0 0 0px 1px #777,
+    0 0 10px 2px #9b9b9b,
+    inset 0 0 0px 1px #777,
+    inset 0 0 10px 2px rgba(62, 82, 74, 0.35);
+}
+
+body.light .hero_btn {
+  background: linear-gradient(135deg, #10b981, #7e8381);
+  color: var(--text-color);
+  box-shadow: 0 8px 25px rgba(3, 3, 3, 0.25);
+}
+
+body.light .hero_btn:hover {
+  background: linear-gradient(135deg, #179169, #10b981);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+body.light .box {
+  position: relative;
+  overflow: hidden;
+
+  border: 0px solid rgba(62, 82, 74, 0.35);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow:
+    -2px 12px 20px -15px rgb(0 0 0 / 64%),
+    0 0 30px rgba(24, 201, 130, 0.12),
+    0 0 20px 2px #c8c1c1 !important;
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.45s,
+    filter 0.45s;
+}
+
+body.light .box:hover {
+  background: #191c2025;
+  border: 0px solid rgba(62, 82, 74, 0.35);
+  box-shadow:
+    0 20px 40px -15px rgb(0 0 0 / 64%),
+    0 0 30px rgba(24, 201, 130, 0.12),
+    0 0 20px 9px #d7d4d4 !important;
+  transform: translateY(-12px) scale(1.04) rotateZ(-2deg);
+  filter: brightness(1.05);
+}
+
+body.light .box:hover .box-icon {
+  background: #111;
+  color: var(--text-color);
+}
+
+body.light .box:hover .box-icon {
+  transform: rotate(-8deg) scale(1.15);
+  background: var(--accent);
+  color: var(--text-color);
+}
+body.light .box-icon svg {
+  stroke: rgb(253, 255, 253);
+}
+body.light .box:hover::before {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.12), transparent 70%);
+}
+
+body.light .boxes h5 {
+  color: #0f172a;
+}
+
+body.light .boxes li {
+  color: black;
+}
+
+body.light .boxes li::before {
+  background: #10b981;
+}
+
+/* ۸. بخش سوابق و کارت‌ها (Qualification & Cards) */
+body.light .qualification {
+  border-top: 1px solid #9b9b9b;
+}
+
+body.light .qualification h2,
+body.light .qualification p {
+  color: #475569;
+}
+
+body.light .qualification h2 {
+  color: #0f172a;
+}
+
+body.light .experience {
+  border-bottom: 1px solid #9b9b9b;
+}
+
+body.light .experience h4 {
+  color: #0f172a;
+}
+
+body.light .cards div {
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow:
+    20px 20px 60px 6px rgba(0, 0, 0, 0.35),
+    -20px -20px 60px var(--text-color);
+}
+body.light .cards div::before {
+  content: "";
+  width: 160px;
+  height: 160px;
+  background: var(--text-color);
+  filter: blur(80px);
+  opacity: 0.3;
+}
+body.light .cards div:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+body.light .cards h5 {
+  color: #0f172a;
+  font-size: medium;
+}
+
+body.light .cards p,
+body.light .cards small {
+  color: #475569;
+}
+
+body.light .greet,
+body.light .role {
+  color: #0f766e;
+}
+
+body.light .scroll-indicator {
+  color: #64748b;
+}
+
+body.light .hero_btn.outline::before {
+  background: rgba(62, 82, 74, 0.35);
+}
+
+body.light .hero_btn.outline {
+  color: #111;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(180, 180, 180, 0.45);
+  box-shadow:
+    0 0 0px 1px rgba(62, 82, 74, 0.35),
+    0 0 10px 2px rgba(0, 0, 0, 0.35),
+    inset 0 0 0px 1px #d5d1d1,
+    inset 0 0 30px 2px rgba(0, 0, 0, 0.35);
+  transition: all 0.35s ease-in-out;
+}
+
+body.light .hero_btn.outline:hover {
+  color: #111;
+  background: rgba(255, 255, 255, 0.32);
+  border-color: rgba(160, 160, 160, 0.75);
+  /* border: none; */
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 1px 11px 2px rgba(255, 255, 255, 0.7),
+    0 8px 20px rgba(0, 0, 0, 0.06);
+}
+body.light .hero_btn:hover span {
+  color: var(--text-primary);
+}
+
+body.light .menu-toggle span {
+  background: #0f172a;
+}
+
+body.light .mobile-nav {
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+body.light .mobile-nav a {
+  color: #475569;
+}
+
+body.light .mobile-nav a:hover {
+  background: rgba(16, 185, 129, 0.08);
+  color: #0f172a;
+}
+
+body.light .aurora-1 {
+  opacity: 0.1;
+  background: #10b981;
+}
+
+body.light .aurora-2 {
+  opacity: 0.07;
+  background: #3b82f6;
+}
+
+body.light .aurora-3 {
+  opacity: 0.05;
+  background: #10b981;
+}
+
+.toggle-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+  color: white;
+}
+
+.theme-toggle svg {
+  position: absolute;
+  width: 100%;
+  height: 21px;
+  transition: 0.9s;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  position: relative;
+  width: 72px;
+  height: 38px;
+  padding: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 999px;
+
+  /* Glass */
+  background: rgba(255, 255, 255, 0.06);
+
+  /* Border شیشه‌ای */
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  /* Shadow */
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.08),
+    0 8px 20px rgba(0, 0, 0, 0.18);
+  transition: 0.35s ease;
+}
+.theme-toggle:hover {
+  border-color: rgba(24, 201, 130, 0.45);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.12),
+    0 0 18px rgba(24, 201, 130, 0.18),
+    0 10px 28px rgba(0, 0, 0, 0.22);
+}
+
+.sun {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0.5);
+}
+
+.moon {
+  opacity: 1;
+}
+
+.theme-toggle:hover {
+  box-shadow:
+    0 0 18px rgba(24, 201, 130, 0.5),
+    0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 600px) {
+  body.light .about {
+    border-color: var(--border);
+    box-shadow:
+      -3px 4px 60px 6px rgba(0, 0, 0, 0.35),
+      -20px -20px 60px var(--text-color);
+  }
+
+  body.light .theme-toggle {
+    /* border-color: rgba(15, 118, 110, 0.4); */
+    border: none;
+  }
+}
+
+@keyframes floatLeft {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-3px, -4px) rotate(-0.5deg);
+  }
+
+  50% {
+    transform: translate(0, -6px) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(3px, -4px) rotate(0.5deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes floatRight {
+  0% {
+    transform: translate(0, -6px) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(3px, -4px) rotate(0.5deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-3px, -4px) rotate(-0.5deg);
+  }
+
+  100% {
+    transform: translate(0, -6px) rotate(0deg);
+  }
+}
+
+.box:first-child {
+  animation: floatRight 12s ease-in-out infinite;
+}
+
+.box:last-child {
+  animation: floatLeft 12s ease-in-out infinite;
+  animation-delay: 4s;
+}
