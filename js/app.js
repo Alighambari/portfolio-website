@@ -1,34 +1,33 @@
 // Mobile hamburger menu toggle
-(function () {
+document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menu-toggle");
-  const mobileNav = document.getElementById("mobile-nav");
+  const mobileOverlay = document.getElementById("mobile-menu-overlay");
+  const menuLinks = document.querySelectorAll(".menu-link");
 
-  if (!menuToggle || !mobileNav) return;
+  // باز و بسته کردن منو
+  if (menuToggle && mobileOverlay) {
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      mobileOverlay.classList.toggle("open");
 
-  function closeMenu() {
-    menuToggle.classList.remove("active");
-    mobileNav.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
+      // جلوگیری از اسکرول شدن صفحه وقتی منو باز است
+      if (mobileOverlay.classList.contains("open")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    });
   }
 
-  function toggleMenu() {
-    const isOpen = mobileNav.classList.toggle("open");
-    menuToggle.classList.toggle("active", isOpen);
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  }
-
-  menuToggle.addEventListener("click", toggleMenu);
-
-  mobileNav.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", closeMenu);
+  // بستن منو وقتی روی یکی از لینک‌ها کلیک می‌شود
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.classList.remove("active");
+      mobileOverlay.classList.remove("open");
+      document.body.style.overflow = "";
+    });
   });
-
-  document.addEventListener("click", function (e) {
-    if (!mobileNav.classList.contains("open")) return;
-    if (mobileNav.contains(e.target) || menuToggle.contains(e.target)) return;
-    closeMenu();
-  });
-})();
+});
 
 const scrolldown = document.querySelector("#gotoQualification");
 
@@ -44,5 +43,8 @@ function scrollHandler(event) {
     });
   }
 }
+if (scrolldown) {
+  scrolldown.addEventListener("click", scrollHandler);
 
-scrolldown.addEventListener("click", scrollHandler);
+}
+

@@ -29,7 +29,7 @@ body.light header {
 }
 
 body.light .logo {
-  color: #4a4e4d;
+  color: var(--text-primary);
   text-shadow: none;
 }
 
